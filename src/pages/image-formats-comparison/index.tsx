@@ -1,0 +1,1 @@
+export { ImageFormatComparison as default } from './image-formats-comparison';

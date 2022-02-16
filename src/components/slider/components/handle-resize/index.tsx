@@ -1,0 +1,1 @@
+export {HandleResize as default } from './handle-resize'

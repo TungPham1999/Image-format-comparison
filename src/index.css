@@ -1,0 +1,17 @@
+@font-face {
+  font-family: "Inter";
+  src: local("Inter"),
+   url("./fonts/Inter-Regular.ttf");
+  font-weight: initial;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  background: transparent;
+  font-size: 0.875rem;
+  margin: 0;
+  font-family: "Inter", "Roboto", "Arial", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
