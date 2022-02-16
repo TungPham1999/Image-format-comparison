@@ -69,8 +69,7 @@ export const Slider: FunctionComponent<SliderProps> = ({ originUrl }) => {
     })
 
     useEffect(() => {
-        handlePathImage(conditionQualityImage.left, 'left')
-        handlePathImage(conditionQualityImage.right, 'right')
+        handlePathImage(conditionQualityImage.left)
     }, [])
 
     const onDragStart = (e: { preventDefault: () => void; pageX: any; }) => {
@@ -98,7 +97,7 @@ export const Slider: FunctionComponent<SliderProps> = ({ originUrl }) => {
     const onDragStop = () => {
         setDragStarted(false);
     }
-    const handlePathImage = (condtion: ValueOfConditionProps, type: string) => {
+    const handlePathImage = (condtion: ValueOfConditionProps, type?: string) => {
         let path = '?'
         if (condtion.force_format) {
             path = path.concat(`force_format=${condtion.force_format}`)
@@ -109,10 +108,18 @@ export const Slider: FunctionComponent<SliderProps> = ({ originUrl }) => {
         if (condtion.q) {
             path = path.concat(`&q=${condtion.q}`)
         }
-        setImageUrl({
-            ...imageUrl,
-            [`${type}`]: path
-        })
+        if (type) {
+            setImageUrl({
+                ...imageUrl,
+                [`${type}`]: path
+            })
+        } else {
+            setImageUrl({
+                left: path,
+                right: path
+            })
+        }
+
     }
 
     const containerOnMouseMove = (e: { pageX: number; }) => {
@@ -172,6 +179,7 @@ export const Slider: FunctionComponent<SliderProps> = ({ originUrl }) => {
                 {(loading.left || loading.right) && (
                     <>
                         <LoadingIndicator />
+                        sadsadsa
                         {previousOrigin && (<Image src={previousOrigin.src} updateLoading={updateLoading} />)}
                     </>
                 )}

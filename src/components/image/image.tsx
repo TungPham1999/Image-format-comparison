@@ -8,7 +8,7 @@ interface ImageProps {
 }
 
 export const Image: FunctionComponent<ImageProps> = ({ src, updateLoading, type }) => {
-    const imageUrl = `http://${src}`;
+    const imageUrl = `https://doc.cloudimg.io/${src}`;
     const onLoadingImage = () => {
         updateLoading(type)
     }
