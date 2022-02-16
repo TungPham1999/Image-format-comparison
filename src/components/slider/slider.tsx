@@ -179,7 +179,6 @@ export const Slider: FunctionComponent<SliderProps> = ({ originUrl }) => {
                 {(loading.left || loading.right) && (
                     <>
                         <LoadingIndicator />
-                        sadsadsa
                         {previousOrigin && (<Image src={previousOrigin.src} updateLoading={updateLoading} />)}
                     </>
                 )}
