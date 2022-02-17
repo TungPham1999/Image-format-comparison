@@ -165,10 +165,10 @@ export const Slider: FunctionComponent<SliderProps> = ({ originUrl }) => {
             <Box className="cd-image-container" sx={{ padding: '1rem !important' }}>
                 <Grid container spacing={2}>
                     <Grid item xs={12} md={6}>
-                        <Condition valueCondition={conditionQualityImage.left} type="left" updateConditionQualityImage={updateConditionQualityImage} />
+                        <Condition valueCondition={conditionQualityImage.right} type="right" updateConditionQualityImage={updateConditionQualityImage} />
                     </Grid>
                     <Grid item xs={12} md={6}>
-                        <Condition valueCondition={conditionQualityImage.right} type="right" updateConditionQualityImage={updateConditionQualityImage} />
+                        <Condition valueCondition={conditionQualityImage.left} type="left" updateConditionQualityImage={updateConditionQualityImage} />
                     </Grid>
                 </Grid>
             </Box>
